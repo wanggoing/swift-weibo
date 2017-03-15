@@ -13,23 +13,14 @@ class DiscoverTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 10
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,59 +28,79 @@ class DiscoverTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+//        let rid = "reuseIdentifier";
+//        var cell = tableView.dequeueReusableCell(withIdentifier: rid)
+//        if cell == nil {
+//            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: rid)
+//        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
+}
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+// MARK: - 数据
+
+extension DiscoverTableViewController {
+    
+}
+
+// MARK: - 自定义TableViewCell
+class CustTableViewCell: UITableViewCell {
+    
+    lazy var titleImage = UIImageView()
+    lazy var title = UILabel()
+    lazy var subTitle = UILabel()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        selectionStyle = .none
+        
+        initUI()
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    private func initUI() {
+        
+        contentView.addSubview(titleImage)
+        contentView.addSubview(title)
+        contentView.addSubview(subTitle)
+        
+        titleImage.snp.makeConstraints { (ConstraintMaker) in
+            ConstraintMaker.left.equalTo(self.contentView)
+            ConstraintMaker.right.equalTo(self.contentView)
+            ConstraintMaker.top.equalTo(self.contentView)
+            ConstraintMaker.bottom.equalTo(self.contentView)
+        }
+        
+        title.snp.makeConstraints { (ConstraintMaker) in
+            ConstraintMaker.centerY.equalTo(self.contentView).offset(-15)
+            ConstraintMaker.centerX.equalTo(self.contentView)
+        }
+        
+        subTitle.snp.makeConstraints { (ConstraintMaker) in
+            ConstraintMaker.centerX.equalTo(self.contentView)
+            ConstraintMaker.centerY.equalTo(self.contentView).offset(5)
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func fillCellData(imgName:String, titleString:String, subTitleString:String) {
+        
+        title.text = titleString
+        subTitle.text = subTitleString
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
-
+    
 }

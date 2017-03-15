@@ -28,6 +28,8 @@
 		0501FF841E0142BF00142AB6 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0501FF711E0142BF00142AB6 /* UIView+WebCacheOperation.m */; };
 		0532D8981E76607200381E76 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0532D8971E76607200381E76 /* BaseTabBarController.swift */; };
 		055B494C1DFA9204007FE37A /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B494B1DFA9204007FE37A /* TitleViewController.swift */; };
+		0592E9C71E7906EA00F6F026 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592E9C61E7906EA00F6F026 /* TestViewController.swift */; };
+		0592E9CC1E79297800F6F026 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592E9CB1E79297800F6F026 /* Network.swift */; };
 		05EB862C1E00FA8F00A37C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05EB862E1E00FA8F00A37C69 /* InfoPlist.strings */; };
 		05EB86871E0113AE00A37C69 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EB86361E0113AE00A37C69 /* DACircularProgressView.m */; };
 		05EB86881E0113AE00A37C69 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EB86381E0113AE00A37C69 /* DALabeledCircularProgressView.m */; };
@@ -128,6 +130,8 @@
 		0532D8971E76607200381E76 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		0532D8991E76745800381E76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		055B494B1DFA9204007FE37A /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		0592E9C61E7906EA00F6F026 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0592E9CB1E79297800F6F026 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		05BC0FB21DFA7DEC00E99518 /* WeiBo-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiBo-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		05EB86301E00FB3200A37C69 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		05EB86311E00FB3200A37C69 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -208,6 +212,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0592E9CA1E79295F00F6F026 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0592E9CB1E79297800F6F026 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		05EB86331E01132A00A37C69 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +353,7 @@
 				21C4E66E1DF30EF3009FFD37 /* Extension */,
 				21C4E6731DF3140E009FFD37 /* Base */,
 				21C4E6801DF5A77E009FFD37 /* QRCode */,
+				0592E9CA1E79295F00F6F026 /* Network */,
 				21C4E6591DF2FD39009FFD37 /* Main */,
 				21C4E62B1DF2FC5F009FFD37 /* AppDelegate.swift */,
 				05EB862E1E00FA8F00A37C69 /* InfoPlist.strings */,
@@ -360,6 +373,7 @@
 				21C4E6661DF2FE53009FFD37 /* MessageTableViewController.swift */,
 				21C4E6681DF2FE60009FFD37 /* DiscoverTableViewController.swift */,
 				21C4E66A1DF2FE6E009FFD37 /* ProfileTableViewController.swift */,
+				0592E9C61E7906EA00F6F026 /* TestViewController.swift */,
 				21C4E67A1DF3BA0C009FFD37 /* PublishViewController.swift */,
 			);
 			path = Main;
@@ -542,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0592E9C71E7906EA00F6F026 /* TestViewController.swift in Sources */,
 				0501FF761E0142BF00142AB6 /* SDImageCacheConfig.m in Sources */,
 				05EB86AF1E0113AE00A37C69 /* ConstraintMakerPriortizable.swift in Sources */,
 				21C4E67B1DF3BA0C009FFD37 /* PublishViewController.swift in Sources */,
@@ -550,6 +565,7 @@
 				05EB86A41E0113AE00A37C69 /* ConstraintInsetTarget.swift in Sources */,
 				0501FF811E0142BF00142AB6 /* UIImageView+HighlightedWebCache.m in Sources */,
 				0501FF841E0142BF00142AB6 /* UIView+WebCacheOperation.m in Sources */,
+				0592E9CC1E79297800F6F026 /* Network.swift in Sources */,
 				05EB86B31E0113AE00A37C69 /* ConstraintPriorityTarget.swift in Sources */,
 				05EB86A11E0113AE00A37C69 /* ConstraintDescription.swift in Sources */,
 				21C4E6651DF2FE43009FFD37 /* HomeTableViewController.swift in Sources */,
